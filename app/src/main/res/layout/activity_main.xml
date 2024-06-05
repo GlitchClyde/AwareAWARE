@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@drawable/ic_background"
+    >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:contentDescription="App logo"
+        android:src="@drawable/ic_logo"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_view_scans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_scan"
+        android:layout_marginTop="20dp"
+        android:contentDescription="View previous scans and their dates scanned"
+        android:importantForAccessibility="yes"
+        android:text="Previous Scans"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="140dp"
+        android:contentDescription="Scan a picture using the phone's camera"
+        android:importantForAccessibility="yes"
+        android:text="New Scan"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_view_scans"
+        android:layout_marginTop="203dp"
+        android:contentDescription="Exit the application"
+        android:importantForAccessibility="yes"
+        android:text="Exit"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

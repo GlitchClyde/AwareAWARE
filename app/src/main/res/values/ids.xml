@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_new_scan" type="id" />
+    <item name="btn_previous_scans" type="id" />
+    <item name="newScanButton" type="id" />
+    <item name="previousScanButton" type="id" />
+    <item name="exitButton" type="id" />
+</resources>

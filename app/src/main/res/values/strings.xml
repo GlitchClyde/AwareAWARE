@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AwareAWARE</string>
+    <string name="new_scan">New Scan</string>
+    <string name="previous_scans">Previous Scans</string>
+    <string name="exit">Exit</string>
+    <string name="app_logo">App logo</string>
+</resources>
