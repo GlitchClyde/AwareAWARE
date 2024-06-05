@@ -17,6 +17,8 @@
         android:src="@drawable/ic_logo"
         tools:ignore="HardcodedText" />
 
+
+
     <Button
         android:id="@+id/btn_view_scans"
         android:layout_width="match_parent"
@@ -44,10 +46,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_view_scans"
-        android:layout_marginTop="203dp"
+        android:layout_marginTop="129dp"
         android:contentDescription="Exit the application"
         android:importantForAccessibility="yes"
         android:text="Exit"
         tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
 </RelativeLayout>

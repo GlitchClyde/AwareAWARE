@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="393dp"
+        android:layout_height="151dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/app_logo"
@@ -32,5 +32,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/instruction_text"
-        android:layout_marginTop="40dp" />
+        android:layout_marginTop="33dp" />
 </RelativeLayout>

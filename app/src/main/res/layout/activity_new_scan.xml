@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="395dp"
+        android:layout_height="118dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:contentDescription="App logo"
-        android:src="@drawable/ic_logo" /> <!-- Replace with actual logo drawable -->
+        android:src="@drawable/ic_logo"
+        tools:ignore="HardcodedText" /> <!-- Replace with actual logo drawable -->
 
     <TextView
         android:id="@+id/instruction_text"
@@ -21,7 +23,8 @@
         android:textAlignment="center"
         android:layout_below="@id/logo"
         android:layout_marginTop="20dp"
-        android:importantForAccessibility="yes" />
+        android:importantForAccessibility="yes"
+        tools:ignore="HardcodedText" />
 
     <FrameLayout
         android:id="@+id/camera_preview"
