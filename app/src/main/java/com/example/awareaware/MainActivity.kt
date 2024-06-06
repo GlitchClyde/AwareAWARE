@@ -19,35 +19,47 @@ class MainActivity : Activity(), TextToSpeech.OnInitListener {
 
         tts = TextToSpeech(this, this)
 
-        // Initialize buttons with error handling
-        val newScanButton = findViewById<Button?>(R.id.newScanButton)
-        val previousScanButton = findViewById<Button?>(R.id.previousScanButton)
-        val exitButton = findViewById<Button?>(R.id.exitButton)
+        // Initialize buttons
+        val newScanButton = findViewById<Button>(R.id.btn_scan)
+        val previousScanButton = findViewById<Button>(R.id.btn_view_scans)
+        val exitButton = findViewById<Button>(R.id.btn_exit)
 
-        if (newScanButton != null) {
-            newScanButton.setOnClickListener {
-                val intent = Intent(this, NewScanActivity::class.java)
+        newScanButton?.apply {
+            setOnClickListener {
+                val intent = Intent(this@MainActivity, NewScanActivity::class.java)
                 startActivity(intent)
             }
-        } else {
-            Log.e("MainActivity", "newScanButton is null")
-        }
+            setOnLongClickListener {
+                speakText("Start a new scan")
+                true
+            }
+        } ?: Log.e("MainActivity", "btn_scan is null")
 
-        if (previousScanButton != null) {
-            previousScanButton.setOnClickListener {
-                val intent = Intent(this, PreviousScansActivity::class.java)
+        previousScanButton?.apply {
+            setOnClickListener {
+                val intent = Intent(this@MainActivity, PreviousScansActivity::class.java)
                 startActivity(intent)
             }
-        } else {
-            Log.e("MainActivity", "previousScanButton is null")
-        }
+            setOnLongClickListener {
+                speakText("View previous scans")
+                true
+            }
+        } ?: Log.e("MainActivity", "btn_view_scans is null")
 
-        if (exitButton != null) {
-            exitButton.setOnClickListener {
+        exitButton?.apply {
+            setOnClickListener {
                 finish()
             }
-        } else {
-            Log.e("MainActivity", "exitButton is null")
+            setOnLongClickListener {
+                speakText("Exit the application")
+                true
+            }
+        } ?: Log.e("MainActivity", "btn_exit is null")
+    }
+
+    private fun speakText(text: String) {
+        if (::tts.isInitialized) {
+            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
         }
     }
 
