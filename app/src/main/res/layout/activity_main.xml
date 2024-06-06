@@ -18,7 +18,6 @@
         tools:ignore="HardcodedText" />
 
 
-
     <Button
         android:id="@+id/btn_view_scans"
         android:layout_width="match_parent"
