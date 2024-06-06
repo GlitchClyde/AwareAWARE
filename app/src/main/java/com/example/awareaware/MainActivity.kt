@@ -19,21 +19,35 @@ class MainActivity : Activity(), TextToSpeech.OnInitListener {
 
         tts = TextToSpeech(this, this)
 
-        val newScanButton = findViewById<Button>(R.id.newScanButton)
-        newScanButton.setOnClickListener {
-            val intent = Intent(this, NewScanActivity::class.java)
-            startActivity(intent)
+        // Initialize buttons with error handling
+        val newScanButton = findViewById<Button?>(R.id.newScanButton)
+        val previousScanButton = findViewById<Button?>(R.id.previousScanButton)
+        val exitButton = findViewById<Button?>(R.id.exitButton)
+
+        if (newScanButton != null) {
+            newScanButton.setOnClickListener {
+                val intent = Intent(this, NewScanActivity::class.java)
+                startActivity(intent)
+            }
+        } else {
+            Log.e("MainActivity", "newScanButton is null")
         }
 
-        val previousScanButton = findViewById<Button>(R.id.previousScanButton)
-        previousScanButton.setOnClickListener {
-            val intent = Intent(this, PreviousScansActivity::class.java)
-            startActivity(intent)
+        if (previousScanButton != null) {
+            previousScanButton.setOnClickListener {
+                val intent = Intent(this, PreviousScansActivity::class.java)
+                startActivity(intent)
+            }
+        } else {
+            Log.e("MainActivity", "previousScanButton is null")
         }
 
-        val exitButton = findViewById<Button>(R.id.exitButton)
-        exitButton.setOnClickListener {
-            finish()
+        if (exitButton != null) {
+            exitButton.setOnClickListener {
+                finish()
+            }
+        } else {
+            Log.e("MainActivity", "exitButton is null")
         }
     }
 
