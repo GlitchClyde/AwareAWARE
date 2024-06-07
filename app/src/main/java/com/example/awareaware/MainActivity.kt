@@ -11,6 +11,7 @@ import java.util.Locale
 class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private lateinit var tts: TextToSpeech
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,8 +20,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
         // Initialize buttons
         val newScanButton = findViewById<Button>(R.id.btn_scan)
-        val previousScanButton = findViewById<Button>(R.id.btn_view_scans)
-        val exitButton = findViewById<Button>(R.id.btn_exit)
+
 
         newScanButton?.apply {
             setOnClickListener {
@@ -28,31 +28,11 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 startActivity(intent)
             }
             setOnLongClickListener {
-                speakText("Start a new scan")
+                speakText("Press again to start a new scan")
                 true
             }
         } ?: Log.e("MainActivity", "btn_scan is null")
 
-        previousScanButton?.apply {
-            setOnClickListener {
-                val intent = Intent(this@MainActivity, PreviousScansActivity::class.java)
-                startActivity(intent)
-            }
-            setOnLongClickListener {
-                speakText("View previous scans")
-                true
-            }
-        } ?: Log.e("MainActivity", "btn_view_scans is null")
-
-        exitButton?.apply {
-            setOnClickListener {
-                finish()
-            }
-            setOnLongClickListener {
-                speakText("Exit the application")
-                true
-            }
-        } ?: Log.e("MainActivity", "btn_exit is null")
     }
 
     private fun speakText(text: String) {

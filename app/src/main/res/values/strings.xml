@@ -5,4 +5,12 @@
     <string name="exit">Exit</string>
     <string name="app_logo">App logo</string>
     <string name="textview">TextView</string>
+    <string name="capture">Capture</string>
+    <string name="this_is_the_description_activity">This is the Description Activity</string>
+    <string name="retake">Retake</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="done">Done</string>
+    <string name="app_logo_po">App logo po</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter description</string>
 </resources>

@@ -19,36 +19,15 @@
 
 
     <Button
-        android:id="@+id/btn_view_scans"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_scan"
-        android:layout_marginTop="20dp"
-        android:contentDescription="View previous scans and their dates scanned"
-        android:importantForAccessibility="yes"
-        android:text="Previous Scans"
-        tools:ignore="HardcodedText" />
-
-    <Button
         android:id="@+id/btn_scan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
         android:layout_below="@id/logo"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="50dp"
         android:contentDescription="Scan a picture using the phone's camera"
         android:importantForAccessibility="yes"
-        android:text="New Scan"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/btn_exit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_view_scans"
-        android:layout_marginTop="129dp"
-        android:contentDescription="Exit the application"
-        android:importantForAccessibility="yes"
-        android:text="Exit"
+        android:text="+ New Scan"
+        android:textSize="50sp"
         tools:ignore="HardcodedText" />
 
     <TextView
